@@ -1,54 +1,67 @@
-const generateManager = () => {
+const generateManager = (manager) => {
     return `
     <div>
         <div>
-            <h2></h2>
+            <h2>${manager.name}</h2>
             <h3>Team Manager</h3>
         </div>
 
     <div>
-        <p>ID #:</p>
-        <p>Email:</p>
-        <p>${manager.officeNum}:</p>
+        <p>ID #:${manager.id}</p>
+        <p>Email:${manager.email}</p>
+        <p>Office #:${manager.officeNum}:</p>
     </div>
 </div>`
 }
 
-const generateEngineer = () => {
+const generateEngineer = (engineer) => {
     return `
     <div>
         <div>
-            <h2></h2>
+            <h2>${engineer.name}</h2>
             <h3>Engineer</h3>
         </div>
 
     <div>
-        <p>ID #:</p>
-        <p>Email:</p>
+        <p>ID #:${engineer.id}</p>
+        <p>Email:${engineer.email}</p>
         <p>${engineer.github}:</p>
     </div>
 </div>`
 }
 
-const generateIntern = () => {
+const generateIntern = (intern) => {
     return `
     <div>
         <div>
-            <h2></h2>
+            <h2>${intern.name}</h2>
             <h3>Intern</h3>
         </div>
 
     <div>
-        <p>ID #:</p>
-        <p>Email:</p>
-        <p>${intern.school}:</p>
+        <p>ID #:${intern.id}</p>
+        <p>Email:${intern.email}</p>
+        <p>Schol:${intern.school}:</p>
     </div>
 </div>`
 }
 
-const generateHTML = () => {
-    return `
-    <!DOCTYPE html>
+const generateHTML = (employees) => {
+    
+    let HTML = ""
+    for (i = 0; i < employees.length; i++){
+        if (employees[i].getRole() === "Manager"){
+            HTML += generateManager(employees[i])
+        }
+        if (employees[i].getRole() === "Engineer"){
+            HTML += generateEngineer(employees[i])
+        }
+        if (employees[i].getRole() === "Intern"){
+            HTML += generateIntern(employees[i])
+        }
+    }
+    console.log(HTML);
+    return `<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -58,6 +71,10 @@ const generateHTML = () => {
     </head>
     <body>
        
+    ${HTML}
+
     </body>
 </html>`
 }
+
+module.exports = generateHTML
