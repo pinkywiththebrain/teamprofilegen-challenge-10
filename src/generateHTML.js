@@ -7,9 +7,9 @@ const generateManager = (manager) => {
         </div>
 
     <div>
-        <p>ID #:${manager.id}</p>
-        <p>Email:${manager.email}</p>
-        <p>Office #:${manager.officeNum}:</p>
+        <p>ID #: ${manager.id}</p>
+        <p>Email: <a href="">${manager.email}</a></p>
+        <p>Office #: ${manager.officeNum}</p>
     </div>
 </div>`
 }
@@ -23,9 +23,9 @@ const generateEngineer = (engineer) => {
         </div>
 
     <div>
-        <p>ID #:${engineer.id}</p>
-        <p>Email:${engineer.email}</p>
-        <p>${engineer.github}:</p>
+        <p>ID #: ${engineer.id}</p>
+        <p>Email: <a href="">${engineer.email}</a></p>
+        <p>Github: <a href=github.com/${engineer.github}>${engineer.github}</a></p>
     </div>
 </div>`
 }
@@ -39,9 +39,9 @@ const generateIntern = (intern) => {
         </div>
 
     <div>
-        <p>ID #:${intern.id}</p>
-        <p>Email:${intern.email}</p>
-        <p>Schol:${intern.school}:</p>
+        <p>ID #: ${intern.id}</p>
+        <p>Email: <a href="">${intern.email}</a></p>
+        <p>School: ${intern.school}</p>
     </div>
 </div>`
 }
@@ -70,9 +70,7 @@ const generateHTML = (employees) => {
         <title>Team Generator</title>
     </head>
     <body>
-       
     ${HTML}
-
     </body>
 </html>`
 }
