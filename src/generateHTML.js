@@ -60,7 +60,6 @@ const generateHTML = (employees) => {
             HTML += generateIntern(employees[i])
         }
     }
-    console.log(HTML);
     return `<!DOCTYPE html>
     <html lang="en">
     <head>

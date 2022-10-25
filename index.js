@@ -67,7 +67,6 @@ const createManager = () => {
       const manager = new Manager(name, id, email, officenum);
 
       team.push(manager);
-      console.log(manager);
       menu();
    })
    .catch(err => console.log(err))
@@ -153,7 +152,6 @@ const addEngineer = () => {
       const engineer = new Engineer(name, id, email, github);
 
       team.push(engineer);
-      console.log(engineer);
       menu();
    })
 }
@@ -218,7 +216,6 @@ const addIntern = () => {
       const intern = new Intern(name, id, email, school);
 
       team.push(intern);
-      console.log(intern);
       menu();
    })
 }
