@@ -1,28 +1,28 @@
 {
-  "dependencies": {
-    "inquirer": "^9.1.4",
-    "jest": "^29.2.1"
-  },
   "name": "teamprofilegen-challenge-10",
-  "description": "",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pinkywiththebrain/teamprofilegen-challenge-10.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pinkywiththebrain/teamprofilegen-challenge-10/issues"
   },
-  "homepage": "https://github.com/pinkywiththebrain/teamprofilegen-challenge-10#readme"
+  "homepage": "https://github.com/pinkywiththebrain/teamprofilegen-challenge-10#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.2.2"
+  }
 }
