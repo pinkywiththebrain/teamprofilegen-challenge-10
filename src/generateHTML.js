@@ -1,3 +1,4 @@
+//adds values from the created manager object to the manager card
 const generateManager = (manager) => {
     return `
     <div class="col border border-dark m-3 p-2">
@@ -14,6 +15,7 @@ const generateManager = (manager) => {
     </div>`
 }
 
+//adds values from the created engineer object to the engineer card
 const generateEngineer = (engineer) => {
     return `
     <div class="col border border-danger m-3 p-2">
@@ -25,11 +27,12 @@ const generateEngineer = (engineer) => {
         <div class="bg-light p-2">
             <p>ID #: ${engineer.id}</p>
             <p>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-            <p>Github: <a href=https://github.com/${engineer.github}>${engineer.github}</a></p>
+            <p>Github: <a href="https://github.com/${engineer.github}" class="_blank">${engineer.github}</a></p>
         </div>
     </div>`
 }
 
+//adds values from the created intern object to the intern card
 const generateIntern = (intern) => {
     return `
     <div class="col border border-primary m-3 p-2">
@@ -46,6 +49,7 @@ const generateIntern = (intern) => {
     </div>`
 }
 
+//loops through the array of added employees and appends them to the corresponding card and then appends them to the base HTML
 const generateHTML = (employees) => {
     
     let HTML = ""

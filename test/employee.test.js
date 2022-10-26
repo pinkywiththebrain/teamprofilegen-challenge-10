@@ -1,5 +1,6 @@
 const Employee = require("../lib/employee")
 
+//tests if the constructor creates the correct properties, corresponding values, and method return value
 describe("Employee", () => {
         it("Should return an object containing the properties name, id, and email.", () => {
             const obj = new Employee("Sophie", 960, "sophiemc99@gmail.com");

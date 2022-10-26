@@ -1,3 +1,4 @@
+//importing needed variables
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Engineer = require("./lib/Engineer");
@@ -5,8 +6,10 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const generateHTML = require("./src/generateHTML")
 
+//the array the chosen team members will be put into
 const team = []
 
+//first prompts about team manager
 const createManager = () => {
    inquirer.prompt ([
    {
@@ -65,13 +68,14 @@ const createManager = () => {
    .then((managerAnswers) => {
       const {name, id, email, officenum} = managerAnswers;
       const manager = new Manager(name, id, email, officenum);
-
+      //pushes into array
       team.push(manager);
       menu();
    })
    .catch(err => console.log(err))
 }
 
+//menu prompt to choose between intern or engineer
 const menu = () => {
    inquirer.prompt ([
        {
@@ -92,6 +96,7 @@ const menu = () => {
    })
 }
 
+//prompts for engineer if engineer was chosen
 const addEngineer = () => {
    inquirer.prompt ([
       {
@@ -150,12 +155,13 @@ const addEngineer = () => {
    .then((engineerAnswers) => {
       const {name, id, email, github} = engineerAnswers;
       const engineer = new Engineer(name, id, email, github);
-
+      //pushes into array
       team.push(engineer);
       menu();
    })
 }
 
+//prompts for intern if intern was chosen
 const addIntern = () => {
    inquirer.prompt ([
       {
@@ -214,7 +220,7 @@ const addIntern = () => {
    .then((internAnswers) => {
       const {name, id, email, school} = internAnswers;
       const intern = new Intern(name, id, email, school);
-
+      //pushes into array
       team.push(intern);
       menu();
    })

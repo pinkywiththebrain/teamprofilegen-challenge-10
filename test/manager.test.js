@@ -1,5 +1,6 @@
 const Manager = require("../lib/manager")
 
+//tests if the constructor creates the correct properties and corresponding values from the parent object, and correct method return value
 describe("Manager", () => {
     it("Should return an object containing the properties name, id, and email.", () => {
         const obj = new Manager("Sophie", 960, "sophiemc99@gmail.com", 123);

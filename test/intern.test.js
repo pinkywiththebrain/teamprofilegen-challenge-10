@@ -1,5 +1,6 @@
 const Intern = require("../lib/intern")
 
+//tests if the constructor creates the correct properties and corresponding values from the parent object, and correct method return value
 describe("Intern", () => {
     it("Should return an object containing the properties name, id, and email.", () => {
         const obj = new Intern("Sophie", 960, "sophiemc99@gmail.com", "University of Richmond");
